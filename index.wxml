@@ -1,0 +1,19 @@
+<view class="container" style="height:100vh;display: flex;flex-direction: row;justify-content: center;align-items: center;background-color: #efb4b4;">
+	<view style="display: flex;flex-direction: column;">
+		<view style="font-size: 3vw;margin-right: 3vw;font-weight: 800;">分数：{{score}}</view>
+		<view style="display: flex;flex-direction: row;margin-top: 0.8vw;align-items: center;color: rgba(0,0,0,0.6);">
+			<view style="font-size: 2vw;font-weight: 500;">放大地图</view>
+			<switch style="zoom: 0.5;margin-left: 0.5vw;" checked="{{bigMap}}" bindtap="bigMap"></switch>
+			<view style="font-size: 1.5vw;margin-left: 0.5vw;">{{bigMap?'开':'关'}}</view>
+		</view>
+	</view>
+	<view style="width:{{bigMap?'70vw':'60vw'}} ;height: {{bigMap?'100vh':'80vh'}};transform: translate(500ms);"><canvas canvas-id="share" id="share" bindtap="tapShareCanvas" style="width: 100%;height: 100%;"></canvas></view>
+	<view style="display: flex;flex-direction: column;border: 2px solid black;">
+		<view style="padding: 0.5vw 1vw;background-color: #FF7E7E;">长居 5</view>
+		<view style="padding: 0.5vw 1vw;background-color: #FFB57E;">短居 4</view>
+		<view style="padding: 0.5vw 1vw;background-color: #FFE57E;">游玩 3</view>
+		<view style="padding: 0.5vw 1vw;background-color: #A8FFBE;">出差 2</view>
+		<view style="padding: 0.5vw 1vw;background-color: #88AEFF;">途径 1</view>
+		<view style="padding: 0.5vw 1vw;background-color: #FFFFFF;">没去过</view>
+	</view>
+</view>
